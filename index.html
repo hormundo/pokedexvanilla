@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Pokedex Vanilla</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="hamburger.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="pokemonDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-4 d-flex justify-content-center">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+                            <div class="col-sm-8">
+                                <h6 class="mb-3">Tipo:</h6>
+                                <div class="tipos"></div>
+                                <p class="historia"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Altura</th>
+                                    <th scope="col">Peso</th>
+                                    <th scope="col">Salud</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th class="altura"></th>
+                                    <th class="peso"></th>
+                                    <th class="salud"></th>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <h6>Velocidad</h6>
+                                <div class="velocidad" data-done=""></div>
+                            </div>
+                            <div class="col-4">
+                                <h6>Ataque</h6>
+                                
+                                <div class="ataque" data-done=""></div>
+                            </div>
+                            <div class="col-4">
+                                <h6>Defensa</h6>
+                                
+                                <div class="defensa" data-done=""></div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <h6 class="mb-3">Debilidades:</h6>
+                        </div>
+                        <div class="debilidades tipos row m-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-light">
+                <div class="container-fluid">
+                  <form class="d-flex w-100">
+                    <div class="form-group w-100 align-self-center">
+                        <input type="search" class="form-control card-filter" name="" id="" aria-describedby="helpId" placeholder="Buscar...">
+                    </div>
+                    <div class="hamburger hamburger--elastic js-hamburger">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+              </nav>
+              <div id="menu" class="menu text-center menu-close">
+                <ul class="nav flex-column"></ul>
+              </div>
+            <div class="row rowPokemon"></div>
+        </div>
+    </main>
+    <template id="card-template">
+        <div class="card-col col-lg-3 col-md-4 col-sm-6 col-xs-12" data-bs-toggle="modal" data-bs-target="#pokemonDetail">
+            <div class="card border-0">
+                <figure>
+                    <img class="card-img-top img-pokemon">
+                </figure>
+                <div class="card-body">
+                    <h5 class="card-title name-pokemon"></h5>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+     <script src="main.js"></script>
+    
+    </body>
+</html>
